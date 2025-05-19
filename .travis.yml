@@ -1,0 +1,12 @@
+language: java
+jdk:
+  - openjdk8
+
+addons:
+  sonarcloud:
+    organization: "nazaroley"  # Замените позже
+    token:
+      secure: "$SONAR_TOKEN"  # Добавим в Travis CI позже
+
+script:
+  - mvn clean verify sonar:sonar
